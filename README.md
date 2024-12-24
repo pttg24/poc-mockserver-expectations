@@ -1,15 +1,19 @@
 # poc-mockserver-expectations
 Testing mockserver via docker-compose
 
-## How to run
+---
+
+### How to run 🎯
 
 - `docker-compose up`
 
-## Dashboard
+### Dashboard 📱
 
 - http://localhost:1080/mockserver/dashboard
 
-## Requests / Responses
+---
+
+### Requests / Responses ✅
 
 **GET**
 
@@ -17,7 +21,7 @@ Testing mockserver via docker-compose
 curl --location 'http://localhost:1080/api/v1/books?code=13200'
 ````
 
-````
+````json
 {
     "name": "Memorial do Convento"
 }
@@ -35,7 +39,7 @@ curl --location --request PUT 'http://localhost:1080/api/v1/books/13200' \
 }'
 ````
 
-````
+````json
 {
     "message": "Resource updated successfully",
     "updatedResource": {
