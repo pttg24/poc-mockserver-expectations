@@ -1,0 +1,47 @@
+[
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/books",
+        "queryStringParameters" : {
+          "code" : ["13200"]
+      }
+    },
+      "httpResponse" : {
+        "body" : {"name": "Memorial do Convento"},
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest": {
+        "method": "PUT",
+        "path": "/api/v1/books/13200",
+        "headers": {
+          "Content-Type": ["application/json"]
+        },
+        "body": {
+          "id": 13200,
+          "name": "Memorial do Convento v2024",
+          "status": "active"
+        }
+      },
+      "httpResponse": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": ["application/json"]
+        },
+        "body": {
+          "message": "Resource updated successfully",
+          "updatedResource": {
+            "id": 13200,
+            "name": "Memorial do Convento v2024",
+            "status": "active"
+          }
+        }
+      },
+      "times": {
+        "remainingTimes": 1,
+        "unlimited": false
+      }
+    }
+  ]
